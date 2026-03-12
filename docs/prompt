@@ -1,0 +1,61 @@
+Subject: Full-Stack Development of a Multiplayer Card Game (Dhumbal)
+
+Objective: Develop a full-stack, real-time multiplayer web application for the Nepalese card game "Dhumbal" (also known as Jhyap). The game should allow users to create/join rooms and play against 2-5 players.
+
+1. Tech Stack Requirements:
+
+Frontend: Next.js with Tailwind CSS for styling. Use Framer Motion for card animations.
+
+Backend: Node.js with Express.
+
+Real-time Communication: Socket.io for game state synchronization.
+
+State Management: Use React Context or Zustand for frontend state.
+
+2. Game Logic & Rules (Dhumbal):
+
+Deck: Standard 52-card deck.
+
+Deal: 5 cards to each player.
+
+Card Values: Ace = 1, 2-10 = Face value, J = 11, Q = 12, K = 13.
+
+Objective: Have the lowest total hand value.
+
+Dropping Cards: - A player can drop a single card, a set (pairs, triples, quads of the same rank), or a sequence (3+ cards of the same suit).
+
+Picking Cards: - After dropping, a player must pick a card from the deck or one of the last card thrown by the previous player.
+
+Declaring (Show/Dhumbal): - A player can declare if their total hand value is 5 or less.
+
+If the declarer has the lowest points, they get 0 points for the round.
+
+Penalty: If another player has a total equal to or lower than the declarer, the declarer gets a penalty of +25 points plus their current hand value.
+
+Winning: The game continues in rounds until a player reaches a target score (e.g., 100). The player with the lowest total score wins.
+
+3. Feature Requirements:
+
+Lobby System: Users can enter a name and create a room with a unique Code, or join an existing room.
+
+Game State Sync: The server must manage the deck, the "throw" pile, turn order, and player hands to prevent cheating.
+
+Turn Timer: 30-second limit per turn.
+
+UI/UX: - A circular table layout showing other players' avatars and card counts.
+
+Drag-and-drop or click-to-select functionality for cards.
+
+Clear "Dhumbal" button that enables only when hand value is ≤ 5.
+
+Scoreboard modal showing round-by-round history.
+
+4. Implementation Steps requested:
+
+First, provide the Backend Socket.io logic to handle room creation, card dealing, and turn-based move validation.
+
+Second, provide the Frontend Game Board component that handles card selection and communicates with the socket.
+
+Third, provide the Game Logic Utility to calculate hand values and validate if a "set" or "sequence" is legal.
+
+Please start by outlining the folder structure and then provide the code for the Backend Server.
