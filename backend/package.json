@@ -5,11 +5,15 @@
   "main": "dist/server.js",
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts"
   },
-  "keywords": ["dhumbal", "card-game", "multiplayer"],
+  "keywords": [
+    "dhumbal",
+    "card-game",
+    "multiplayer"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
